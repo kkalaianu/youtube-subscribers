@@ -6,8 +6,12 @@ const subscriberModel = require("./models/subscribers");
 const data = require("./data"); 
 
 // Connect to DATABASE
-const URI = "mongodb+srv://newproject:new@cluster0.vcrrudg.mongodb.net/youtubesubscribers?retryWrites=true&w=majority";
-mongoose.connect(URI);
+const DATABASE_URL = "mongodb+srv://newproject:new@cluster0.vcrrudg.mongodb.net/youtubesubscribers?retryWrites=true&w=majority";
+mongoose.connect(DATABASE_URL, {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true, 
+});
+
   
 
 
