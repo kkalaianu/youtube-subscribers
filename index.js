@@ -19,9 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 
 
 // Connecting to the database
-const URI ="mongodb+srv://newproject:new@cluster0.vcrrudg.mongodb.net/youtubesubscribers?retryWrites=true&w=majority";
+const DATABASE_URL ="mongodb+srv://newproject:new@cluster0.vcrrudg.mongodb.net/youtubesubscribers?retryWrites=true&w=majority";
+mongoose.connect(DATABASE_URL, {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true, 
+});
 
-mongoose.connect(URI);
+
 
 const dataBase = mongoose.connection;
 // Handling database connection errors
