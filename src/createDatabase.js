@@ -7,13 +7,8 @@ const data = require("./data");
 
 // Connect to DATABASE
 const DATABASE_URL = "mongodb+srv://newproject:new@cluster0.vcrrudg.mongodb.net/youtubesubscribers?retryWrites=true&w=majority";
-mongoose.connect(DATABASE_URL, {
-  useNewUrlParser: true, 
-  useUnifiedTopology: true, 
-});
-
+mongoose.connect(DATABASE_URL);
   
-
 
 // Get the database connection object
 const dataBase = mongoose.connection; 
